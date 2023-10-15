@@ -1,0 +1,18 @@
+services:
+  issue-tracker:
+    image: mysql:latest
+    restart: always
+    container_name: issue-tracker
+    environment:
+      MYSQL_DATABASE: "issue-tracker"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    ports:
+      - "3309:3306"
+    expose:
+      - "3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata:
