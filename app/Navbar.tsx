@@ -20,7 +20,7 @@ const Navbar = () => {
         {links.map((link) => (
           <li
             className={`${
-              link.href === currentPath ? "text-blue-300" : "text-white"
+              link.href === currentPath ? "text-blue-300" : "text-black"
             }`}
             key={link.href}
           >
