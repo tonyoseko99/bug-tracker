@@ -1,5 +1,7 @@
 "use client";
-import { Button, Flex, Heading, TextArea, TextField } from "@radix-ui/themes";
+import { Button, Flex, Heading, TextField } from "@radix-ui/themes";
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 import React, { useState } from "react";
 
 const NewIssue = () => {
@@ -14,11 +16,7 @@ const NewIssue = () => {
         <TextField.Root>
           <TextField.Input placeholder="Title" name="title" />
         </TextField.Root>
-        <TextArea
-          variant="classic"
-          placeholder="Description"
-          name="description"
-        />
+        <SimpleMDE placeholder="Description" />
         <Button>submit</Button>
       </Flex>
     </div>
